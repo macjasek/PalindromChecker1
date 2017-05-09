@@ -28,7 +28,7 @@ namespace PalindromChecker
 
         static void PalindromEven(char[] palindrom, int start, int koniec)
         {
-            //Sprawdzanie palindromu parzystego
+            //Sprawdzanie palindromu parzystego//
             if (start > koniec)
             {
                 Console.WriteLine("Z wprowadzanych znaków można utworzyć palindrom");
