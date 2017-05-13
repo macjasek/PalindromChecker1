@@ -26,10 +26,10 @@ namespace PalindromChecker
             
         }
 
-        static void PalindromEven(char[] palindrom, int start, int koniec)
+        static void PalindromEven(char[] palindrom, int start, int end)
         {
-            //Sprawdzanie palindromu parzystego//
-            if (start > koniec)
+            //Sprawdzanie palindromu parzystego
+            if (start > end)
             {
                 Console.WriteLine("Z wprowadzanych znaków można utworzyć palindrom");
             }
@@ -40,27 +40,27 @@ namespace PalindromChecker
             else
             {
                 //Wywołanie rekurencyjne
-                PalindromEven(palindrom, start + 2, koniec);
+                PalindromEven(palindrom, start + 2, end);
             }
 
         }
 
-        static void PalindromOdd(char[] palindrom, int start, int koniec)
+        static void PalindromOdd(char[] palindrom, int start, int end)
         {
             //Sprawdzanie palindromu nieparzystego
-            if (start == koniec)
+            if (start == end)
             {
                 Console.WriteLine("Z wprowadzanych znaków można utworzyć palindrom");
             }
             else if (palindrom[start] != palindrom[start + 1])
             {
                 //zabieramy jeden znaczek i traktujemy jak parzysty
-                PalindromEven(palindrom, start + 1, koniec);
+                PalindromEven(palindrom, start + 1, end);
             }
             else
             {
                 //Wywołanie rekurencyjne
-                PalindromOdd(palindrom, start + 2, koniec);
+                PalindromOdd(palindrom, start + 2, end);
             }
         }
         
